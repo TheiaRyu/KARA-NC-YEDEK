@@ -1,0 +1,184 @@
+/* Genel Sayfa Ayarları (Saf Oyuncu Odası Karanlığı) */
+body {
+    background: #05040a !important;
+    color: #ffffff;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 420px;
+}
+
+/* --- Başlık Alanı (Arkadaki dikdörtgen kutu tamamen yok edildi) --- */
+.clan-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 10px 0;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* Havada Asılı Parlayan Büyük Neon Gemi */
+.clan-ship {
+    font-size: 85px;
+    color: #ff0055;
+    text-shadow: 
+        0 0 10px #ff0055, 
+        0 0 25px #ff0055, 
+        0 0 45px #ff0055;
+    margin-bottom: 10px;
+    animation: floatingShip 4s ease-in-out infinite;
+}
+
+/* Net Okunan Parlayan Başlık */
+.clan-title {
+    font-size: 32px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    color: #ffffff;
+    text-shadow: 0 0 15px rgba(0, 242, 254, 0.8);
+    margin: 0 0 8px 0;
+}
+
+/* Slogan */
+.clan-status {
+    color: #00f2fe;
+    font-size: 11px;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: bold;
+    text-shadow: 0 0 8px rgba(0, 242, 254, 0.6);
+}
+
+/* Dalgalanma Animasyonu */
+@keyframes floatingShip {
+    0% { transform: translateY(0px) scale(1); }
+    50% { transform: translateY(-8px) scale(1.04); }
+    100% { transform: translateY(0px) scale(1); }
+}
+
+/* --- Şık ve Düzenli Akordeon Menü Kutuları --- */
+.accordion-item {
+    background: #0d0b16 !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 14px !important;
+    margin-bottom: 15px !important;
+    overflow: hidden !important;
+    transition: all 0.3s ease;
+}
+
+.accordion-header {
+    width: 100%;
+    background: none !important;
+    border: none !important;
+    color: #ffffff !important;
+    padding: 22px 20px !important;
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    text-align: left !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    cursor: pointer !important;
+}
+
+.accordion-header:hover {
+    background: rgba(255, 255, 255, 0.02) !important;
+}
+
+.accordion-header .icon {
+    font-size: 18px;
+    color: #00f2fe;
+    transition: transform 0.3s ease;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease-out, padding 0.35s ease;
+    background: #07050d !important;
+    padding: 0 20px;
+    color: #b3b0cb !important;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.accordion-content p {
+    margin: 12px 0 !important;
+}
+
+/* Menü Açıldığında Çerçevenin Parlaması */
+.accordion-item.active {
+    border-color: #00f2fe !important;
+    box-shadow: 0 0 15px rgba(0, 242, 254, 0.2) !important;
+}
+
+.accordion-item.active .icon {
+    transform: rotate(45deg);
+    color: #ff0055;
+}
+
+/* --- Alt Taktik Menüleri (Grind / Vill Win) --- */
+.sub-accordion-item {
+    background: #120f22 !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    border-radius: 10px !important;
+    margin-bottom: 12px !important;
+    overflow: hidden !important;
+}
+
+.sub-accordion-header {
+    width: 100%;
+    background: none !important;
+    border: none !important;
+    color: #ffffff !important;
+    padding: 16px !important;
+    font-size: 13px !important;
+    font-weight: bold !important;
+    text-align: left !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    cursor: pointer !important;
+}
+
+.sub-accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease;
+    background: #090712 !important;
+    padding: 0 16px;
+    color: #a29fb8 !important;
+    font-size: 13px;
+}
+
+.sub-accordion-item.active {
+    border-color: #ff0055 !important;
+}
+
+.sub-accordion-item.active .sub-icon {
+    transform: rotate(45deg);
+    color: #ff0055;
+}
+
+.bg-pink-border.accordion-item.active {
+    border-color: #ff0055 !important;
+    box-shadow: 0 0 15px rgba(255, 0, 85, 0.2) !important;
+}
+
+.txt-pink {
+    color: #ff0055 !important;
+}
+
+.icon-pink {
+    color: #ff0055 !important;
+}
