@@ -182,3 +182,13 @@ body {
 .icon-pink {
     color: #ff0055 !important;
 }
+.xp-table-container {
+    background: #0d1117;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+#xp-table th, #xp-table td {
+    border-bottom: 1px solid #30363d;
+}
