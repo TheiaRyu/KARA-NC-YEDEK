@@ -1,686 +1,767 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <style>
-    body { padding-bottom: 260px !important; }
-    </style>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KARA İNCİ - Klan Bilgi Paneli</title>
-    <link rel="stylesheet" href="style.css?v=999">
+    <title>KARA İNCİ - Haftalık XP Takibi</title>
+    <style>
+        body {
+            background-color: #0b0c10;
+            color: #c5c6c7;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .container {
+            width: 100%;
+            max-width: 500px;
+            background: #1f2833;
+            border: 2px solid #00ffcc;
+            box-shadow: 0 0 15px #00ffcc;
+            border-radius: 15px;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+            margin-top: 20px;
+        }
+        h2 {
+            color: #00ffcc;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 25px;
+            font-size: 22px;
+            text-shadow: 0 0 10px #00ffcc;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th, td {
+            padding: 12px 5px;
+            text-align: center;
+            border-bottom: 1px solid #45f3ff22;
+            font-size: 14px;
+        }
+        th {
+            color: #66fcf1;
+            text-transform: uppercase;
+            font-size: 11px;
+            letter-spacing: 1px;
+        }
+        tr:hover {
+            background: #2f3e46;
+        }
+        .founder-box {
+            margin-top: 30px;
+            border-top: 1px solid #45f3ff44;
+            padding-top: 15px;
+            color: #66fcf1;
+        }
+        .founder-title {
+            font-size: 12px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #00ffcc;
+        }
+        .founder-name {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+    </style>
 </head>
 <body>
-    <div style="width: 100% !important; margin: 30px 0 !important; padding: 0 !important; display: flex !important; flex-direction: column !important; align-items: center !important; justify-content: center !important; text-align: center !important;">
-        
-        <div style="font-size: 50px !important; margin-bottom: 5px !important; filter: drop-shadow(0 0 10px #00cbd6) !important;">𓊝</div>
-        
-        <div class="container">
-            <div class="clan-header">
-                <h1 class="clan-title">⚡ KARA İNCİ ⚡</h1>
-                <p class="clan-status">Sınırları Zorlayanların Dünyası</p>
-            </div>
 
-            <div class="accordion">
-                
-                <div class="accordion-item">
-                    <button class="accordion-header">
-                        <span>🔰 GENEL KURALLAR</span>
-                        <span class="icon">+</span>
-                    </button>
-                    <div class="accordion-content">
-                        <p>𓊝 Küfür, argo, ırkçılık, siyaset, aşağılayıcı cümleler kullanmak yasaktır.</p>
-                        <p>𓊝 Görev ücreti 500 🪙</p>
-                        <p>𓊝 Haftalık 3k XP kasamayan klandan atılır.</p>
-                    </div>
-                </div>
-
-                <div class="accordion-item">
-                    <button class="accordion-header">
-                        <span>🔥 ÖZEL KURALLAR</span>
-                        <span class="icon">+</span>
-                    </button>
-                    <div class="accordion-content">
-                        <p>𓊝 Görevlerde en çok XP kasana bir sonraki görev ücretsizdir.</p>
-                        <p>𓊝 Haftalık en çok XP kasana 100 gül hediyedir.</p>
-                    </div>
-                </div>
-
-                <div class="accordion-item bg-pink-border">
-                    <button class="accordion-header">
-                        <span class="txt-pink">🚀 XP KASMA TAKTİĞİ</span>
-                        <span class="icon icon-pink">+</span>
-                    </button>
-                    <div class="accordion-content">
-                        <div class="sub-accordion">
-                            <div class="sub-accordion-item">
-                                <button class="sub-accordion-header">
-                                    <span>🏆 VİLL WİN</span>
-                                    <span class="sub-icon">+</span>
-                                </button>
-                                <div class="sub-accordion-content">
-                                    <p>özel oyunlarda ingiliz sunucusunu işaretlemeniz gerek. Bu sunucuda her zaman vill win yazan odalar bulunur.</p>
-                                    <p>Kurtlar kendi aşıklarını öldürerek kendilerini de öldürür. Kalan diğer kurt ise sabah asılır veya vurulur böylece 30-90 saniyede oyun bitmiş olur. Eğer yavru kurt varsa yavru kurdun aşığı asılır ve yavru kurt da yanına diğer kurdun aşığını alarak ilk gecede oyunu köylülere kazandırır.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-        <!-- ⚡ PYTHON SCRİPTİ BURAYI OTOMATİK DOLDURACAK ⚡ -->
-        <!-- START_XP_PANEL -->
-<div style="width: 100%; max-width: 500px; margin: 30px auto; padding: 20px; background: rgba(20, 20, 30, 0.8); border: 2px solid #00cbd6; border-radius: 15px; box-shadow: 0 0 20px rgba(0, 203, 214, 0.4); box-sizing: border-box;">
-    <div style="text-align: center; margin-bottom: 20px; border-bottom: 2px solid rgba(0, 203, 214, 0.2); padding-bottom: 10px;">
-        <h2 style="margin: 0; color: #00cbd6; font-size: 22px; letter-spacing: 2px; text-transform: uppercase; font-family: sans-serif; text-shadow: 0 0 10px #00cbd6;">HAFTALIK XP TAKİBİ</h2>
-    </div>
-    <div style="overflow-x: auto;">
-        <table style="width: 100%; border-collapse: collapse; text-align: left; font-family: sans-serif;">
-            <thead>
-                <tr style="color: #fff; font-size: 13px; letter-spacing: 1px; border-bottom: 2px solid rgba(255,255,255,0.1);">
-                    <th style="padding: 10px 5px;">KLAN ÜYESİ</th>
-                    <th style="padding: 10px 5px; text-align: center;">HAFTALIK XP</th>
-                    <th style="padding: 10px 5px; text-align: center;">AYLIK XP</th>
-                    <th style="padding: 10px 5px; text-align: center;">DURUM</th>
-                </tr>
-            </thead>
-            <tbody style="color: #e2e8f0; font-size: 14px;">
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(255,255,255,0.02);">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">sansgato</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); ">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">ravenrita</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(255,255,255,0.02);">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">MrNumber</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); ">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">Sunshi</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(255,255,255,0.02);">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">lKastlek</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); ">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">AWci</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(255,255,255,0.02);">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">axelwitsel</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); ">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">kriistall</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(255,255,255,0.02);">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">lukresiya</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); ">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">Vergtart</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(255,255,255,0.02);">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">velmont</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); ">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">mulder</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(255,255,255,0.02);">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">lMarsh</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); ">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">cansuuuss0</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(255,255,255,0.02);">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">cilecash</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); ">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">bigboss9</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(255,255,255,0.02);">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">taresa</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); ">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">McRoller</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(255,255,255,0.02);">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">Minasa</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); ">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">feross</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(255,255,255,0.02);">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">oSiradaBen</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); ">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">zeuzeu</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(255,255,255,0.02);">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">D4RWIN</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); ">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">Xief</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(255,255,255,0.02);">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">ilaygnd</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); ">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">scarletwiitch</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(255,255,255,0.02);">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">UKYOOOOO</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); ">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">DrrTenma</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(255,255,255,0.02);">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">TheScofield</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); ">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">cicek</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(255,255,255,0.02);">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">Avoen</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); ">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">Karabey_</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(255,255,255,0.02);">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">AAAAUUUUU</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); ">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">Runeg</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(255,255,255,0.02);">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">Eswin</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); ">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">MoonFlowerr</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(255,255,255,0.02);">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">nineucuran_73</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); ">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">Yunik7</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(255,255,255,0.02);">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">messifedaisi</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); ">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">IQuaresma_</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(255,255,255,0.02);">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">Iyaren_55</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); ">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">mecha_cobra</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(255,255,255,0.02);">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">kiymalipidee</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); ">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">Lexuratus</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(255,255,255,0.02);">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">Scot</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); ">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">aycaa_</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(255,255,255,0.02);">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">leblebibaronu</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); ">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">BestObsi</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(255,255,255,0.02);">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">mustzeysa</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); ">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">tinoevtm</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(255,255,255,0.02);">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">TURSUU</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); ">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">IElaa</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(255,255,255,0.02);">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">Petito</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); ">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">Oznurr</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(255,255,255,0.02);">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">augustine</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); ">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">ymirsimper</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(255,255,255,0.02);">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">xXHeliosArcxX</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); ">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">kaworu</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(255,255,255,0.02);">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">kutur_erik</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); ">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">Kzey</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(255,255,255,0.02);">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">TheiaRyu</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); ">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">Feroxfera</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(255,255,255,0.02);">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">Sirena</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); ">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">panpik</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(255,255,255,0.02);">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">kayserili</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); ">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">JOPER</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(255,255,255,0.02);">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">KIMSE</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); ">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">justt_girll</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(255,255,255,0.02);">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">ketimor</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); ">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">aqualyrics55</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(255,255,255,0.02);">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">krepser</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); ">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">ImNightMare</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(255,255,255,0.02);">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">BABANIZGELDI1</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); ">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">M4_54_F1REB1RD</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(255,255,255,0.02);">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">lallisonargent</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); ">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">katarinaas</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(255,255,255,0.02);">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">Zamnnep</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); ">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">insafagel</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(255,255,255,0.02);">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">Metehan_55</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); ">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">tarih</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(255,255,255,0.02);">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">hukukokuyorm</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); ">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">hirosli</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(255,255,255,0.02);">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">defoll</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); ">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">Quaeth</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(255,255,255,0.02);">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">EIIie</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); ">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">Ahiyan</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(255,255,255,0.02);">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">reo</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); ">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">Mayhos</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(255,255,255,0.02);">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">vexi</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); ">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">gopce</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(255,255,255,0.02);">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">Dmertens</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); ">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">Esme_</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(255,255,255,0.02);">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">shazee</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); ">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">Yusuft</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(255,255,255,0.02);">
-            <td style="padding: 12px 5px; font-weight: bold; color: rgba(255,255,255,0.5);">Kagami</td>
-            <td style="padding: 12px 5px; text-align: center; color: #ef4444; font-weight: bold;">0</td>
-            <td style="padding: 12px 5px; text-align: center;">0</td>
-            <td style="padding: 12px 5px; text-align: center; font-size: 16px;">❌</td>
-        </tr>
-            </tbody>
-        </table>
-    </div>
-    <div style="margin-top: 20px; padding: 10px; background: rgba(0, 203, 214, 0.1); border-radius: 8px; font-size: 12px; color: #fff; text-align: center; font-family: sans-serif;">
-        Haftalık Klan Barajı: <span style="color: #00cbd6; font-weight: bold;">3.000 XP</span> <br>
-        <span style="font-size: 11px; color: rgba(255,255,255,0.6);">(Durumlar API ile otomatik denetlenir: ✔️ Başarılı / ❌ Başarısız)</span>
+<div class="container">
+    <h2>HAFTALIK XP TAKİBİ</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>KLAN ÜYESİ</th>
+                <th>HAFTALIK XP</th>
+                <th>AYLIK XP</th>
+                <th>DURUM</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+    <tr>
+        <td>sansgato</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">205</td>
+        <td><span style='color: #2ecc71;'>✓</span></td>
+    </tr>
+    
+    <tr>
+        <td>ravenrita</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">11,166</td>
+        <td><span style='color: #2ecc71;'>✓</span></td>
+    </tr>
+    
+    <tr>
+        <td>MrNumber</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">0</td>
+        <td><span style='color: #e74c3c;'>X</span></td>
+    </tr>
+    
+    <tr>
+        <td>Sunshi</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">34,020</td>
+        <td><span style='color: #2ecc71;'>✓</span></td>
+    </tr>
+    
+    <tr>
+        <td>lKastlek</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">13,595</td>
+        <td><span style='color: #2ecc71;'>✓</span></td>
+    </tr>
+    
+    <tr>
+        <td>AWci</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">110,776</td>
+        <td><span style='color: #2ecc71;'>✓</span></td>
+    </tr>
+    
+    <tr>
+        <td>axelwitsel</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">15,432</td>
+        <td><span style='color: #2ecc71;'>✓</span></td>
+    </tr>
+    
+    <tr>
+        <td>kriistall</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">0</td>
+        <td><span style='color: #e74c3c;'>X</span></td>
+    </tr>
+    
+    <tr>
+        <td>lukresiya</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">0</td>
+        <td><span style='color: #e74c3c;'>X</span></td>
+    </tr>
+    
+    <tr>
+        <td>Vergtart</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">0</td>
+        <td><span style='color: #e74c3c;'>X</span></td>
+    </tr>
+    
+    <tr>
+        <td>velmont</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">0</td>
+        <td><span style='color: #e74c3c;'>X</span></td>
+    </tr>
+    
+    <tr>
+        <td>mulder</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">0</td>
+        <td><span style='color: #e74c3c;'>X</span></td>
+    </tr>
+    
+    <tr>
+        <td>lMarsh</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">47,349</td>
+        <td><span style='color: #2ecc71;'>✓</span></td>
+    </tr>
+    
+    <tr>
+        <td>cansuuuss0</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">0</td>
+        <td><span style='color: #e74c3c;'>X</span></td>
+    </tr>
+    
+    <tr>
+        <td>cilecash</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">1,390</td>
+        <td><span style='color: #2ecc71;'>✓</span></td>
+    </tr>
+    
+    <tr>
+        <td>bigboss9</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">0</td>
+        <td><span style='color: #e74c3c;'>X</span></td>
+    </tr>
+    
+    <tr>
+        <td>taresa</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">0</td>
+        <td><span style='color: #e74c3c;'>X</span></td>
+    </tr>
+    
+    <tr>
+        <td>McRoller</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">0</td>
+        <td><span style='color: #e74c3c;'>X</span></td>
+    </tr>
+    
+    <tr>
+        <td>Minasa</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">76,393</td>
+        <td><span style='color: #2ecc71;'>✓</span></td>
+    </tr>
+    
+    <tr>
+        <td>feross</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">0</td>
+        <td><span style='color: #e74c3c;'>X</span></td>
+    </tr>
+    
+    <tr>
+        <td>oSiradaBen</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">0</td>
+        <td><span style='color: #e74c3c;'>X</span></td>
+    </tr>
+    
+    <tr>
+        <td>zeuzeu</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">25,437</td>
+        <td><span style='color: #2ecc71;'>✓</span></td>
+    </tr>
+    
+    <tr>
+        <td>D4RWIN</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">6,491</td>
+        <td><span style='color: #2ecc71;'>✓</span></td>
+    </tr>
+    
+    <tr>
+        <td>Xief</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">0</td>
+        <td><span style='color: #e74c3c;'>X</span></td>
+    </tr>
+    
+    <tr>
+        <td>ilaygnd</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">49,467</td>
+        <td><span style='color: #2ecc71;'>✓</span></td>
+    </tr>
+    
+    <tr>
+        <td>scarletwiitch</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">0</td>
+        <td><span style='color: #e74c3c;'>X</span></td>
+    </tr>
+    
+    <tr>
+        <td>UKYOOOOO</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">0</td>
+        <td><span style='color: #e74c3c;'>X</span></td>
+    </tr>
+    
+    <tr>
+        <td>DrrTenma</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">0</td>
+        <td><span style='color: #e74c3c;'>X</span></td>
+    </tr>
+    
+    <tr>
+        <td>TheScofield</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">0</td>
+        <td><span style='color: #e74c3c;'>X</span></td>
+    </tr>
+    
+    <tr>
+        <td>cicek</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">99,257</td>
+        <td><span style='color: #2ecc71;'>✓</span></td>
+    </tr>
+    
+    <tr>
+        <td>Avoen</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">3,569</td>
+        <td><span style='color: #2ecc71;'>✓</span></td>
+    </tr>
+    
+    <tr>
+        <td>Karabey_</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">112,267</td>
+        <td><span style='color: #2ecc71;'>✓</span></td>
+    </tr>
+    
+    <tr>
+        <td>AAAAUUUUU</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">4,689</td>
+        <td><span style='color: #2ecc71;'>✓</span></td>
+    </tr>
+    
+    <tr>
+        <td>Runeg</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">84,176</td>
+        <td><span style='color: #2ecc71;'>✓</span></td>
+    </tr>
+    
+    <tr>
+        <td>Eswin</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">0</td>
+        <td><span style='color: #e74c3c;'>X</span></td>
+    </tr>
+    
+    <tr>
+        <td>MoonFlowerr</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">0</td>
+        <td><span style='color: #e74c3c;'>X</span></td>
+    </tr>
+    
+    <tr>
+        <td>nineucuran_73</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">4,182</td>
+        <td><span style='color: #2ecc71;'>✓</span></td>
+    </tr>
+    
+    <tr>
+        <td>Yunik7</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">90</td>
+        <td><span style='color: #2ecc71;'>✓</span></td>
+    </tr>
+    
+    <tr>
+        <td>messifedaisi</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">0</td>
+        <td><span style='color: #e74c3c;'>X</span></td>
+    </tr>
+    
+    <tr>
+        <td>IQuaresma_</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">58,102</td>
+        <td><span style='color: #2ecc71;'>✓</span></td>
+    </tr>
+    
+    <tr>
+        <td>Iyaren_55</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">57,231</td>
+        <td><span style='color: #2ecc71;'>✓</span></td>
+    </tr>
+    
+    <tr>
+        <td>mecha_cobra</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">1,307</td>
+        <td><span style='color: #2ecc71;'>✓</span></td>
+    </tr>
+    
+    <tr>
+        <td>kiymalipidee</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">0</td>
+        <td><span style='color: #e74c3c;'>X</span></td>
+    </tr>
+    
+    <tr>
+        <td>Lexuratus</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">0</td>
+        <td><span style='color: #e74c3c;'>X</span></td>
+    </tr>
+    
+    <tr>
+        <td>Scot</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">0</td>
+        <td><span style='color: #e74c3c;'>X</span></td>
+    </tr>
+    
+    <tr>
+        <td>aycaa_</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">0</td>
+        <td><span style='color: #e74c3c;'>X</span></td>
+    </tr>
+    
+    <tr>
+        <td>leblebibaronu</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">4,469</td>
+        <td><span style='color: #2ecc71;'>✓</span></td>
+    </tr>
+    
+    <tr>
+        <td>BestObsi</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">0</td>
+        <td><span style='color: #e74c3c;'>X</span></td>
+    </tr>
+    
+    <tr>
+        <td>mustzeysa</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">376</td>
+        <td><span style='color: #2ecc71;'>✓</span></td>
+    </tr>
+    
+    <tr>
+        <td>tinoevtm</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">0</td>
+        <td><span style='color: #e74c3c;'>X</span></td>
+    </tr>
+    
+    <tr>
+        <td>TURSUU</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">0</td>
+        <td><span style='color: #e74c3c;'>X</span></td>
+    </tr>
+    
+    <tr>
+        <td>IElaa</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">645</td>
+        <td><span style='color: #2ecc71;'>✓</span></td>
+    </tr>
+    
+    <tr>
+        <td>Petito</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">1,675</td>
+        <td><span style='color: #2ecc71;'>✓</span></td>
+    </tr>
+    
+    <tr>
+        <td>Oznurr</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">0</td>
+        <td><span style='color: #e74c3c;'>X</span></td>
+    </tr>
+    
+    <tr>
+        <td>augustine</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">0</td>
+        <td><span style='color: #e74c3c;'>X</span></td>
+    </tr>
+    
+    <tr>
+        <td>ymirsimper</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">0</td>
+        <td><span style='color: #e74c3c;'>X</span></td>
+    </tr>
+    
+    <tr>
+        <td>xXHeliosArcxX</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">490</td>
+        <td><span style='color: #2ecc71;'>✓</span></td>
+    </tr>
+    
+    <tr>
+        <td>kaworu</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">36,222</td>
+        <td><span style='color: #2ecc71;'>✓</span></td>
+    </tr>
+    
+    <tr>
+        <td>kutur_erik</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">2,219</td>
+        <td><span style='color: #2ecc71;'>✓</span></td>
+    </tr>
+    
+    <tr>
+        <td>Kzey</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">12,815</td>
+        <td><span style='color: #2ecc71;'>✓</span></td>
+    </tr>
+    
+    <tr>
+        <td>TheiaRyu</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">1,413,875</td>
+        <td><span style='color: #2ecc71;'>✓</span></td>
+    </tr>
+    
+    <tr>
+        <td>Feroxfera</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">2,078</td>
+        <td><span style='color: #2ecc71;'>✓</span></td>
+    </tr>
+    
+    <tr>
+        <td>Sirena</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">0</td>
+        <td><span style='color: #e74c3c;'>X</span></td>
+    </tr>
+    
+    <tr>
+        <td>panpik</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">1,091</td>
+        <td><span style='color: #2ecc71;'>✓</span></td>
+    </tr>
+    
+    <tr>
+        <td>kayserili</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">0</td>
+        <td><span style='color: #e74c3c;'>X</span></td>
+    </tr>
+    
+    <tr>
+        <td>JOPER</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">0</td>
+        <td><span style='color: #e74c3c;'>X</span></td>
+    </tr>
+    
+    <tr>
+        <td>KIMSE</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">1,956</td>
+        <td><span style='color: #2ecc71;'>✓</span></td>
+    </tr>
+    
+    <tr>
+        <td>justt_girll</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">9,306</td>
+        <td><span style='color: #2ecc71;'>✓</span></td>
+    </tr>
+    
+    <tr>
+        <td>ketimor</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">9,867</td>
+        <td><span style='color: #2ecc71;'>✓</span></td>
+    </tr>
+    
+    <tr>
+        <td>aqualyrics55</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">0</td>
+        <td><span style='color: #e74c3c;'>X</span></td>
+    </tr>
+    
+    <tr>
+        <td>krepser</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">0</td>
+        <td><span style='color: #e74c3c;'>X</span></td>
+    </tr>
+    
+    <tr>
+        <td>ImNightMare</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">0</td>
+        <td><span style='color: #e74c3c;'>X</span></td>
+    </tr>
+    
+    <tr>
+        <td>BABANIZGELDI1</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">780,673</td>
+        <td><span style='color: #2ecc71;'>✓</span></td>
+    </tr>
+    
+    <tr>
+        <td>M4_54_F1REB1RD</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">18,176</td>
+        <td><span style='color: #2ecc71;'>✓</span></td>
+    </tr>
+    
+    <tr>
+        <td>lallisonargent</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">0</td>
+        <td><span style='color: #e74c3c;'>X</span></td>
+    </tr>
+    
+    <tr>
+        <td>katarinaas</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">24,934</td>
+        <td><span style='color: #2ecc71;'>✓</span></td>
+    </tr>
+    
+    <tr>
+        <td>Zamnnep</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">8,277</td>
+        <td><span style='color: #2ecc71;'>✓</span></td>
+    </tr>
+    
+    <tr>
+        <td>insafagel</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">0</td>
+        <td><span style='color: #e74c3c;'>X</span></td>
+    </tr>
+    
+    <tr>
+        <td>Metehan_55</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">2,778</td>
+        <td><span style='color: #2ecc71;'>✓</span></td>
+    </tr>
+    
+    <tr>
+        <td>tarih</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">251</td>
+        <td><span style='color: #2ecc71;'>✓</span></td>
+    </tr>
+    
+    <tr>
+        <td>hukukokuyorm</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">0</td>
+        <td><span style='color: #e74c3c;'>X</span></td>
+    </tr>
+    
+    <tr>
+        <td>hirosli</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">0</td>
+        <td><span style='color: #e74c3c;'>X</span></td>
+    </tr>
+    
+    <tr>
+        <td>defoll</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">0</td>
+        <td><span style='color: #e74c3c;'>X</span></td>
+    </tr>
+    
+    <tr>
+        <td>Quaeth</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">50,710</td>
+        <td><span style='color: #2ecc71;'>✓</span></td>
+    </tr>
+    
+    <tr>
+        <td>EIIie</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">0</td>
+        <td><span style='color: #e74c3c;'>X</span></td>
+    </tr>
+    
+    <tr>
+        <td>Ahiyan</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">0</td>
+        <td><span style='color: #e74c3c;'>X</span></td>
+    </tr>
+    
+    <tr>
+        <td>reo</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">0</td>
+        <td><span style='color: #e74c3c;'>X</span></td>
+    </tr>
+    
+    <tr>
+        <td>Mayhos</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">0</td>
+        <td><span style='color: #e74c3c;'>X</span></td>
+    </tr>
+    
+    <tr>
+        <td>vexi</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">781</td>
+        <td><span style='color: #2ecc71;'>✓</span></td>
+    </tr>
+    
+    <tr>
+        <td>gopce</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">0</td>
+        <td><span style='color: #e74c3c;'>X</span></td>
+    </tr>
+    
+    <tr>
+        <td>Dmertens</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">112,366</td>
+        <td><span style='color: #2ecc71;'>✓</span></td>
+    </tr>
+    
+    <tr>
+        <td>Esme_</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">34,878</td>
+        <td><span style='color: #2ecc71;'>✓</span></td>
+    </tr>
+    
+    <tr>
+        <td>shazee</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">0</td>
+        <td><span style='color: #e74c3c;'>X</span></td>
+    </tr>
+    
+    <tr>
+        <td>Yusuft</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">0</td>
+        <td><span style='color: #e74c3c;'>X</span></td>
+    </tr>
+    
+    <tr>
+        <td>Kagami</td>
+        <td style="color: #ff3366; font-weight: bold;">0</td>
+        <td style="color: #00ffcc;">77,491</td>
+        <td><span style='color: #2ecc71;'>✓</span></td>
+    </tr>
+    
+        </tbody>
+    </table>
+    
+    <div class="founder-box">
+        <div class="founder-title">FOUNDER</div>
+        <div class="founder-name">TheiaRyu</div>
     </div>
 </div>
-<!-- END_XP_PANEL -->
 
-    </div>
-
-    <!-- Sabit Alt Founder Kartı -->
-    <div class="founder-kart" style="position: fixed !important; bottom: 0 !important; left: 0 !important; width: 100% !important; background-color: #0d1117 !important; border-top: 2px solid #00cbd6 !important; border-left: none !important; border-right: none !important; border-bottom: none !important; border-radius: 20px 20px 0 0 !important; box-shadow: 0 -5px 20px rgba(0, 203, 214, 0.4) !important; padding: 15px !important; box-sizing: border-box !important; z-index: 999999 !important; display: flex !important; flex-direction: row !important; align-items: center !important; justify-content: space-around !important;">
-        <div style="text-align: left !important;">
-            <div style="font-size: 14px !important; font-weight: bold !important; color: #00cbd6 !important; text-transform: uppercase !important; letter-spacing: 2px !important; font-family: sans-serif !important; margin-bottom: 5px !important;">Founder</div>
-            <div style="font-size: 22px !important; font-weight: bold !important; color: #ffffff !important; letter-spacing: 1px !important; font-family: sans-serif !important;">TheiaRyu</div>
-        </div>
-        <div style="width: 80px !important; height: 80px !important; border-radius: 50% !important; overflow: hidden !important; border: 3px solid #ffffff !important; display: flex !important; align-items: center !important; justify-content: center !important; margin: 0 !important;">
-            <img src="karakter.png" alt="Founder" style="width: 100% !important; height: 100% !important; object-fit: cover !important;">
-        </div>
-    </div>
-
-    <script src="script.js"></script>
 </body>
-                            </html>
-                            
+</html>
