@@ -1,117 +1,101 @@
 <!DOCTYPE html>
+
 <html lang="tr">
 <head>
-    <style>
+<style>
     body { padding-bottom: 260px !important; }
     </style>
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KARA İNCİ - Klan Bilgi Paneli</title>
-    <link rel="stylesheet" href="style.css"`?v=999`>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>KARA İNCİ - Klan Bilgi Paneli</title>
+<link `?v="999`" href="style.css" rel="stylesheet"/>
 </head>
 <body>
-    <div style="width: 100% !important; margin: 30px 0 !important; padding: 0 !important; display: flex !important; flex-direction: column !important; align-items: center !important; justify-content: center !important; text-align: center !important;">
-        
-        <div style="font-size: 50px !important; margin-bottom: 5px !important; filter: drop-shadow(0 0 10px #00cbd6) !important;">𓊝</div>
-    <div class="container">
-        <div class="clan-header">
-            <h1 class="clan-title">⚡ KARA İNCİ ⚡</h1>
-            <p class="clan-status">Sınırları Zorlayanların Dünyası</p>
-        </div>
-
-        <div class="accordion">
-            
-            <div class="accordion-item">
-                <button class="accordion-header">
-                    <span>🔰 GENEL KURALLAR</span>
-                    <span class="icon">+</span>
-                </button>
-                <div class="accordion-content">
-                    <p>𓊝 Küfür, argo, ırkçılık, siyaset, aşağılayıcı cümleler kullanmak yasaktır.</p>
-                    <p>𓊝 Görev ücreti 500 🪙</p>
-                    <p>𓊝 Haftalık 3k XP kasamayan klandan atılır.</p>
-                </div>
-            </div>
-
-            <div class="accordion-item">
-                <button class="accordion-header">
-                    <span>🔥 ÖZEL KURALLAR</span>
-                    <span class="icon">+</span>
-                </button>
-                <div class="accordion-content">
-                    <p>𓊝 Görevlerde en çok XP kasana bir sonraki görev ücretsizdir.</p>
-                    <p>𓊝 Haftalık en çok XP kasana 100 gül hediyedir.</p>
-                </div>
-            </div>
-
-            <div class="accordion-item bg-pink-border">
-                <button class="accordion-header">
-                    <span class="txt-pink">🚀 XP KASMA TAKTİĞİ</span>
-                    <span class="icon icon-pink">+</span>
-                </button>
-                <div class="accordion-content">
-                    <div class="sub-accordion">
-                        
-
-                        <div class="sub-accordion-item">
-                            <button class="sub-accordion-header">
-                                <span>🏆 VİLL WİN</span>
-                                <span class="sub-icon">+</span>
-                            </button>
-                            <div class="sub-accordion-content">
-                                <p>özel oyunlarda ingiliz sunucusunu işaretlemeniz gerek. Bu sunucuda her zaman vill win yazan odalar bulunur.</p>
-                                <p>Kurtlar kendi aşıklarını öldürerek kendilerini de öldürür. Kalan diğer kurt ise sabah asılır veya vurulur böylece 30-90 saniyede oyun bitmiş olur. Eğer yavru kurt varsa yavru kurdun aşığı asılır ve yavru kurt da yanına diğer kurdun aşığını alarak ilk gecede oyunu köylülere kazandırır.</p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
+<div style="width: 100% !important; margin: 30px 0 !important; padding: 0 !important; display: flex !important; flex-direction: column !important; align-items: center !important; justify-content: center !important; text-align: center !important;">
+<div style="font-size: 50px !important; margin-bottom: 5px !important; filter: drop-shadow(0 0 10px #00cbd6) !important;">𓊝</div>
+<div class="container">
+<div class="clan-header">
+<h1 class="clan-title">⚡ KARA İNCİ ⚡</h1>
+<p class="clan-status">Sınırları Zorlayanların Dünyası</p>
+</div>
+<div class="accordion">
 <div class="accordion-item">
-    <button class="accordion-header">
-        <span>📈 HAFTALIK XP TAKİBİ</span>
-        <span class="icon">+</span>
-    </button>
-    <div class="accordion-content">
-        <div class="xp-table-container">
-            <!-- Burası script.js ile Wolvesville API'den gelecek -->
-            <table id="xp-table" style="width: 100%; color: #fff; text-align: left; border-collapse: collapse;">
-                <thead>
-                    <tr style="color: #00cbd6;">
-                        <th style="padding: 10px;">Üye</th>
-                        <th style="padding: 10px;">XP</th>
-                        <th style="padding: 10px;">Durum</th>
-                    </tr>
-                </thead>
-                <tbody id="xp-table-body">
-                    <!-- Veriler buraya yüklenecek -->
-                </tbody>
-            </table>
-        </div>
-    </div>
+<button class="accordion-header">
+<span>🔰 GENEL KURALLAR</span>
+<span class="icon">+</span>
+</button>
+<div class="accordion-content">
+<p>𓊝 Küfür, argo, ırkçılık, siyaset, aşağılayıcı cümleler kullanmak yasaktır.</p>
+<p>𓊝 Görev ücreti 500 🪙</p>
+<p>𓊝 Haftalık 3k XP kasamayan klandan atılır.</p>
 </div>
-            
-        </div>
-
-    </div>
-    </div>
-        <div class="founder-kart" style="position: fixed !important; bottom: 0 !important; left: 0 !important; width: 100% !important; background-color: #0d1117 !important; border-top: 2px solid #00cbd6 !important; border-left: none !important; border-right: none !important; border-bottom: none !important; border-radius: 20px 20px 0 0 !important; box-shadow: 0 -5px 20px rgba(0, 203, 214, 0.4) !important; padding: 15px !important; box-sizing: border-box !important; z-index: 999999 !important; display: flex !important; flex-direction: row !important; align-items: center !important; justify-content: space-around !important;">
-        
-        <div style="text-align: left !important;">
-            <div style="font-size: 14px !important; font-weight: bold !important; color: #00cbd6 !important; text-transform: uppercase !important; letter-spacing: 2px !important; font-family: sans-serif !important; margin-bottom: 5px !important;">Founder</div>
-            <div style="font-size: 22px !important; font-weight: bold !important; color: #ffffff !important; letter-spacing: 1px !important; font-family: sans-serif !important;">TheiaRyu</div>
-        </div>
-
-        <div style="width: 80px !important; height: 80px !important; border-radius: 50% !important; overflow: hidden !important; border: 3px solid #ffffff !important; display: flex !important; align-items: center !important; justify-content: center !important; margin: 0 !important;">
-            <img src="karakter.png" alt="Founder" style="width: 100% !important; height: 100% !important; object-fit: cover !important;">
-        </div>
-    
 </div>
-    </div> <script kaynak="script.js"></script>
+<div class="accordion-item">
+<button class="accordion-header">
+<span>🔥 ÖZEL KURALLAR</span>
+<span class="icon">+</span>
+</button>
+<div class="accordion-content">
+<p>𓊝 Görevlerde en çok XP kasana bir sonraki görev ücretsizdir.</p>
+<p>𓊝 Haftalık en çok XP kasana 100 gül hediyedir.</p>
+</div>
+</div>
+<div class="accordion-item bg-pink-border">
+<button class="accordion-header">
+<span class="txt-pink">🚀 XP KASMA TAKTİĞİ</span>
+<span class="icon icon-pink">+</span>
+</button>
+<div class="accordion-content">
+<div class="sub-accordion">
+<div class="sub-accordion-item">
+<button class="sub-accordion-header">
+<span>🏆 VİLL WİN</span>
+<span class="sub-icon">+</span>
+</button>
+<div class="sub-accordion-content">
+<p>özel oyunlarda ingiliz sunucusunu işaretlemeniz gerek. Bu sunucuda her zaman vill win yazan odalar bulunur.</p>
+<p>Kurtlar kendi aşıklarını öldürerek kendilerini de öldürür. Kalan diğer kurt ise sabah asılır veya vurulur böylece 30-90 saniyede oyun bitmiş olur. Eğer yavru kurt varsa yavru kurdun aşığı asılır ve yavru kurt da yanına diğer kurdun aşığını alarak ilk gecede oyunu köylülere kazandırır.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="accordion-item">
+<button class="accordion-header">
+<span>📈 HAFTALIK XP TAKİBİ</span>
+<span class="icon">+</span>
+</button>
+<div class="accordion-content">
+<div class="xp-table-container">
+<!-- Burası script.js ile Wolvesville API'den gelecek -->
+<table id="xp-table" style="width: 100%; color: #fff; text-align: left; border-collapse: collapse;">
+<thead>
+<tr style="color: #00cbd6;">
+<th style="padding: 10px;">Üye</th>
+<th style="padding: 10px;">XP</th>
+<th style="padding: 10px;">Durum</th>
+</tr>
+</thead>
+<tbody id="xp-table-body"><tr><td style="padding:8px;">sansgato</td><td style="padding:8px;">2408</td><td style="padding:8px;">❌</td></tr><tr><td style="padding:8px;">ravenrita</td><td style="padding:8px;">11166</td><td style="padding:8px;">✅</td></tr><tr><td style="padding:8px;">Sunshi</td><td style="padding:8px;">34030</td><td style="padding:8px;">✅</td></tr><tr><td style="padding:8px;">lKastlek</td><td style="padding:8px;">13595</td><td style="padding:8px;">✅</td></tr><tr><td style="padding:8px;">AWci</td><td style="padding:8px;">111756</td><td style="padding:8px;">✅</td></tr><tr><td style="padding:8px;">axelwitsel</td><td style="padding:8px;">17003</td><td style="padding:8px;">✅</td></tr><tr><td style="padding:8px;">lMarsh</td><td style="padding:8px;">47532</td><td style="padding:8px;">✅</td></tr><tr><td style="padding:8px;">cilecash</td><td style="padding:8px;">1755</td><td style="padding:8px;">❌</td></tr><tr><td style="padding:8px;">Minasa</td><td style="padding:8px;">76618</td><td style="padding:8px;">✅</td></tr><tr><td style="padding:8px;">zeuzeu</td><td style="padding:8px;">25941</td><td style="padding:8px;">✅</td></tr><tr><td style="padding:8px;">D4RWIN</td><td style="padding:8px;">7143</td><td style="padding:8px;">✅</td></tr><tr><td style="padding:8px;">ilaygnd</td><td style="padding:8px;">50143</td><td style="padding:8px;">✅</td></tr><tr><td style="padding:8px;">DrrTenma</td><td style="padding:8px;">0</td><td style="padding:8px;">❌</td></tr><tr><td style="padding:8px;">cicek</td><td style="padding:8px;">99257</td><td style="padding:8px;">✅</td></tr><tr><td style="padding:8px;">Avoen</td><td style="padding:8px;">3593</td><td style="padding:8px;">✅</td></tr><tr><td style="padding:8px;">Karabey_</td><td style="padding:8px;">115386</td><td style="padding:8px;">✅</td></tr><tr><td style="padding:8px;">AAAAUUUUU</td><td style="padding:8px;">4689</td><td style="padding:8px;">✅</td></tr><tr><td style="padding:8px;">Runeg</td><td style="padding:8px;">86320</td><td style="padding:8px;">✅</td></tr><tr><td style="padding:8px;">nineucuran_73</td><td style="padding:8px;">4182</td><td style="padding:8px;">✅</td></tr><tr><td style="padding:8px;">Yunik7</td><td style="padding:8px;">90</td><td style="padding:8px;">❌</td></tr><tr><td style="padding:8px;">messifedaisi</td><td style="padding:8px;">579</td><td style="padding:8px;">❌</td></tr><tr><td style="padding:8px;">IQuaresma_</td><td style="padding:8px;">60692</td><td style="padding:8px;">✅</td></tr><tr><td style="padding:8px;">Iyaren_55</td><td style="padding:8px;">57231</td><td style="padding:8px;">✅</td></tr><tr><td style="padding:8px;">xMechax</td><td style="padding:8px;">3709</td><td style="padding:8px;">✅</td></tr><tr><td style="padding:8px;">leblebibaronu</td><td style="padding:8px;">4469</td><td style="padding:8px;">✅</td></tr><tr><td style="padding:8px;">BestObsi</td><td style="padding:8px;">1434</td><td style="padding:8px;">❌</td></tr><tr><td style="padding:8px;">mustzeysa</td><td style="padding:8px;">798</td><td style="padding:8px;">❌</td></tr><tr><td style="padding:8px;">IElaa</td><td style="padding:8px;">645</td><td style="padding:8px;">❌</td></tr><tr><td style="padding:8px;">Petito</td><td style="padding:8px;">1675</td><td style="padding:8px;">❌</td></tr><tr><td style="padding:8px;">xXHeliosArcxX</td><td style="padding:8px;">490</td><td style="padding:8px;">❌</td></tr><tr><td style="padding:8px;">kaworu</td><td style="padding:8px;">38817</td><td style="padding:8px;">✅</td></tr><tr><td style="padding:8px;">kutur_erik</td><td style="padding:8px;">3942</td><td style="padding:8px;">✅</td></tr><tr><td style="padding:8px;">Kzey</td><td style="padding:8px;">12815</td><td style="padding:8px;">✅</td></tr><tr><td style="padding:8px;">TheiaRyu</td><td style="padding:8px;">1414135</td><td style="padding:8px;">✅</td></tr><tr><td style="padding:8px;">Feroxfera</td><td style="padding:8px;">2078</td><td style="padding:8px;">❌</td></tr><tr><td style="padding:8px;">panpik</td><td style="padding:8px;">1091</td><td style="padding:8px;">❌</td></tr><tr><td style="padding:8px;">KIMSE</td><td style="padding:8px;">2455</td><td style="padding:8px;">❌</td></tr><tr><td style="padding:8px;">justt_girll</td><td style="padding:8px;">9306</td><td style="padding:8px;">✅</td></tr><tr><td style="padding:8px;">ketimor</td><td style="padding:8px;">9867</td><td style="padding:8px;">✅</td></tr><tr><td style="padding:8px;">BABANIZGELDI1</td><td style="padding:8px;">780673</td><td style="padding:8px;">✅</td></tr><tr><td style="padding:8px;">M4_54_F1REB1RD</td><td style="padding:8px;">19327</td><td style="padding:8px;">✅</td></tr><tr><td style="padding:8px;">katarinaas</td><td style="padding:8px;">25254</td><td style="padding:8px;">✅</td></tr><tr><td style="padding:8px;">Zamnnep</td><td style="padding:8px;">8277</td><td style="padding:8px;">✅</td></tr><tr><td style="padding:8px;">Metehan_55</td><td style="padding:8px;">4208</td><td style="padding:8px;">✅</td></tr><tr><td style="padding:8px;">tarih</td><td style="padding:8px;">1811</td><td style="padding:8px;">❌</td></tr><tr><td style="padding:8px;">Quaeth</td><td style="padding:8px;">50760</td><td style="padding:8px;">✅</td></tr><tr><td style="padding:8px;">vexi</td><td style="padding:8px;">781</td><td style="padding:8px;">❌</td></tr><tr><td style="padding:8px;">Dmertens</td><td style="padding:8px;">116283</td><td style="padding:8px;">✅</td></tr><tr><td style="padding:8px;">Esme_</td><td style="padding:8px;">36110</td><td style="padding:8px;">✅</td></tr><tr><td style="padding:8px;">Kagami</td><td style="padding:8px;">77491</td><td style="padding:8px;">✅</td></tr></tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="founder-kart" style="position: fixed !important; bottom: 0 !important; left: 0 !important; width: 100% !important; background-color: #0d1117 !important; border-top: 2px solid #00cbd6 !important; border-left: none !important; border-right: none !important; border-bottom: none !important; border-radius: 20px 20px 0 0 !important; box-shadow: 0 -5px 20px rgba(0, 203, 214, 0.4) !important; padding: 15px !important; box-sizing: border-box !important; z-index: 999999 !important; display: flex !important; flex-direction: row !important; align-items: center !important; justify-content: space-around !important;">
+<div style="text-align: left !important;">
+<div style="font-size: 14px !important; font-weight: bold !important; color: #00cbd6 !important; text-transform: uppercase !important; letter-spacing: 2px !important; font-family: sans-serif !important; margin-bottom: 5px !important;">Founder</div>
+<div style="font-size: 22px !important; font-weight: bold !important; color: #ffffff !important; letter-spacing: 1px !important; font-family: sans-serif !important;">TheiaRyu</div>
+</div>
+<div style="width: 80px !important; height: 80px !important; border-radius: 50% !important; overflow: hidden !important; border: 3px solid #ffffff !important; display: flex !important; align-items: center !important; justify-content: center !important; margin: 0 !important;">
+<img alt="Founder" src="karakter.png" style="width: 100% !important; height: 100% !important; object-fit: cover !important;"/>
+</div>
+</div>
+ <script kaynak="script.js"></script>
 </body>
 </html>
+<script src="script.js"></script>
 
-    <script src="script.js"></script>
-</body>
-</html>
+
